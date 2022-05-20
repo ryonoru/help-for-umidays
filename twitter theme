@@ -1,0 +1,41 @@
+Copy the code below and place or above the updates box or below:
+
+
+<!-- Extra box / updates -->
+    <meta name="text:Extra Title" content="Extra box"/>
+    <meta name="text:Extra Description" content="Extra box for whatever you want! Delete the text here and the box will go away."/>
+    
+    
+    
+    
+    Now you can put this part anywhere in the sidebar just search for /* ---------- SIDEBAR ---------- */
+    
+    
+    /* extra */
+
+.extra > div { 
+    margin: 0; 
+    padding: 15px; 
+}
+
+.extra a {
+    color: var(--bg-accent);
+}
+
+.extra a:hover {
+    text-decoration: underline;
+}
+
+
+
+This part is extremely important that you paste wherever the box is (top or bottom or in the middle) just search for <!-- sidebar -->
+
+
+{block:ifExtraDescription}
+    <div class="sidebar extra">
+        {block:ifExtraTitle}
+        <h2>{text:Extra Title}</h2>
+        {/block:ifExtraTitle}
+        <div>{text:Extra Description}</div>
+    </div>
+    {/block:ifExtraDescription}
